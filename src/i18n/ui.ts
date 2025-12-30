@@ -10,8 +10,10 @@ export const showDefaultLang = false;
 export const ui = {
   fr: {
     'welcome.title': 'Récré EauSecours',
+    'welcome.contact': 'Contactez-nous',
   },
   en: {
     'welcome.title': 'Splash rescue',
+    'welcome.contact': 'Contact us',
   },
 } as const;
