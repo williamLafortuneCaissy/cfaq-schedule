@@ -6,9 +6,12 @@ const t = useTranslations(lang);
 ---
 
 <div class="container">
-	<main class="card">
+	<main>
 		<h1>{t("welcome.title")}</h1>
-		<div style="aspect-ratio: 1; border: 1px solid #dadada"></div>
+		<iframe
+			class="calendly"
+			src="https://calendly.com/recreeausecours"
+			frameborder="0"></iframe>
 	</main>
 	<aside class="card">
 		<h2 class="contact">{t("welcome.contact")}</h2>
@@ -82,6 +85,19 @@ const t = useTranslations(lang);
 	</aside>
 
 	<style>
+		body {
+			background-color: #fafafa;
+		}
+		.calendly {
+			height: 80vh;
+			width: 100%;
+
+			@media screen and (min-width: 45rem) {
+				& {
+					height: 36rem;
+				}
+			}
+		}
 		.container {
 			margin-inline: auto;
 			padding-block: 2rem;
@@ -97,12 +113,6 @@ const t = useTranslations(lang);
 				}
 				main {
 					width: 45rem;
-				}
-			}
-			@media screen and (min-width: 70rem) {
-				& {
-					flex-direction: row-reverse;
-					align-items: start;
 				}
 			}
 		}
@@ -147,13 +157,11 @@ const t = useTranslations(lang);
 
 		@media screen and (min-width: 768px) {
 			.card {
-				border-radius: 2rem;
-				/* https://getcssscan.com/css-box-shadow-examples */
-				box-shadow:
-					rgba(17, 17, 26, 0.1) 0px 8px 24px,
-					rgba(17, 17, 26, 0.1) 0px 16px 56px,
-					rgba(17, 17, 26, 0.1) 0px 24px 80px;
+				border-radius: 8px;
+				box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 8px 0px;
+				border: 1px solid rgba(26, 26, 26, 0.1);
 				padding: 2rem;
+				background-color: white;
 			}
 		}
 	</style>

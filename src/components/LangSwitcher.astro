@@ -8,11 +8,13 @@ const translatePath = useTranslatedPath(lang);
 
 <ul>
   {
-    Object.entries(languages).map(([lang, label]) => (
-      <li>
-        <a href={translatePath("/", lang)}>{label}</a>
-      </li>
-    ))
+    Object.entries(languages)
+      .filter(([currentLang]) => lang !== currentLang)
+      .map(([lang, label]) => (
+        <li>
+          <a href={translatePath("/", lang)}>{label}</a>
+        </li>
+      ))
   }
 </ul>
 

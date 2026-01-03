@@ -81,5 +81,11 @@ ul {
 }
 
 a {
-  text-underline-position: under;
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    color: #004eba;
+    transition: color 0.2s ease-in-out;
+  }
 }
